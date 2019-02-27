@@ -1,0 +1,102 @@
+<html>
+<head>
+<style>
+
+div.main {
+	border: 3px solid lightblue;
+
+}
+
+body {
+	background-color: #c7d5ed;
+}
+
+input {
+	background-color: lightblue;
+	border: 1px solid #91b7f7;
+}
+
+
+</style>
+</head>
+<body>
+<div id="go">
+	Enter a: <input type="text" id="input1" value="Verb ending in 'ing' "> <br>
+	Enter a: <input type="text" id="input2" value="Noun"> <br>
+	Enter a: <input type="text" id="input3" value="Time"> <br>
+	Enter a: <input type="text" id="input4" value="Animal"> <br>
+	Enter a: <input type="text" id="input5" value="Verb ending in 'ing' "> <br>
+	Enter a: <input type="text" id="input6" value="Noun"> <br>
+	Enter a: <input type="text" id="input7" value="Animal"> <br>
+	Enter a: <input type="text" id="input8" value="Adjective"> <br>
+	Enter a: <input type="text" id="input9" value="Adjective"> <br>
+	Enter a: <input type="text" id="input10" value="Adjective"> <br>
+	Enter a: <input type="text" id="input11" value="Adverb"> <br>
+	Enter a: <input type="text" id="input12" value="Verb"> <br>
+	Enter a: <input type="text" id="input13" value="Verb ending in 'ed' "> <br>
+
+	<input type="button" name="myButton" value="Create my story!">
+</div>
+
+<div class="main" id="story">
+
+</div>
+
+</body>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+$("input[name=myButton]").on("click",writeStory)
+
+function writeStory(evt) { 
+
+	var x1 = $("#input1").val();
+	var x2 = $("#input2").val();
+	var x3 = $("#input3").val();
+	var x4 = $("#input4").val();
+	var x5 = $("#input5").val();
+	var x6 = $("#input6").val();
+	var x7 = $("#input7").val();
+	var x8 = $("#input8").val();
+	var x9 = $("#input9").val();
+	var x10 = $("#input10").val();
+	var x11 = $("#input11").val();
+	var x12 = $("#input12").val();
+	var x13 = $("#input13").val();
+
+	var story = "I was " + x1 + " down the " + x2 + " at " + x3 + " o'clock";
+	story += "<br>";
+	story += "Then suddenly out of nowhere is saw a " + x4 + " " +x5 + " a " + x6;
+	story += "<br>";
+	story += "The " + x7 + " was " + x8 + ", " + x9 + " and " + x10;
+	story += "<br>";
+	story += "Then it " + x11 + " " + x12 + " and " + x13 + " me ";
+	story += "<br>";
+	story += "THE END";
+	
+	$("#story").html(story);
+	
+	
+	var del = x1;
+	$("#go").html(del);
+
+//I was <span id="output1"></span> down the <span id="output2"></span> at <span id="output3"></span> o'clock.
+// Then suddenly out of nowhere i saw a (animal) (verb ending in 'ing') a (noun). 
+// The (animal) was (adjective), (adjective) and (adjective).
+//The it (adverb) (verb) and (verb ending in 'ed') me. The eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeend
+
+
+
+
+
+
+
+}
+</script>

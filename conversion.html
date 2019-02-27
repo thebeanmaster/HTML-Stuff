@@ -1,0 +1,118 @@
+<html>
+<style>
+
+
+</style>
+<body>
+
+CAD <input type="text" id="cadin">
+<button id="cadbut">Convert From CAD</button>
+<br>
+USD <input type="text" id="usdin">
+<button id="usdbut">Convert From USD</button>
+<br>
+EUR <input type="text" id="eurin">
+<button id="eurbut">Convert From EUR</button>
+<br>
+GBP <input type="text" id="gbpin">
+<button id="gbpbut">Convert From GBP</button>
+<br>
+AUD <input type="text" id="audin">
+<button id="audbut">Convert From AUD</button>
+<br>
+
+
+
+<div>USD:<span id="usd"></span></div>
+<div>CAD:<span id="cad"></span></div>
+<div>EUR:<span id="eur"></span></div>
+<div>GBP:<span id="gbp"></span></div>
+<div>AUD:<span id="aud"></span></div>
+
+</body>
+<script>
+function doCanadian() {
+  var cadcash = document.getElementById("cadin").value;
+  var usdtot = cadcash * 0.76;
+  document.getElementById("usd").innerHTML = usdtot;
+  var cadtot = cadcash * 1;
+  document.getElementById("cad").innerHTML = cadtot;
+  var eurtot = cadcash * 0.6575;
+  document.getElementById("eur").innerHTML = eurtot;
+  var gbptot = cadcash * 0.59037;
+  document.getElementById("gbp").innerHTML = gbptot;
+  var audtot = cadcash * 1.05483;
+  document.getElementById("aud").innerHTML = audtot;
+}
+
+function doAmerican() {
+  var usdcash = document.getElementById("usdin").value;
+  var usdtot = usdcash * 1;
+  document.getElementById("usd").innerHTML = usdtot;
+  var cadtot = usdcash * 1.32847;
+  document.getElementById("cad").innerHTML = cadtot;
+  var eurtot = usdcash * 0.8736;
+  document.getElementById("eur").innerHTML = eurtot;
+  var gbptot = usdcash * 0.78441;
+  document.getElementById("gbp").innerHTML = gbptot;
+  var audtot = usdcash * 1.40152;
+  document.getElementById("aud").innerHTML = audtot;
+}
+
+function doEuropean() {
+  var eurcash = document.getElementById("eurin").value;
+  var usdtot = eurcash * 1.15292;
+  document.getElementById("usd").innerHTML = usdtot;
+  var cadtot = eurcash * 1.52545;
+  document.getElementById("cad").innerHTML = cadtot;
+  var eurtot = eurcash * 1;
+  document.getElementById("eur").innerHTML = eurtot;
+  var gbptot = eurcash * 0.90318;
+  document.getElementById("gbp").innerHTML = gbptot;
+  var audtot = eurcash * 1.60535;
+  document.getElementById("aud").innerHTML = audtot;
+}
+
+function doBritish() {
+  var gbpcash = document.getElementById("gbpin").value;
+  var usdtot = gbpcash * 1.27631;
+  document.getElementById("usd").innerHTML = usdtot;
+  var cadtot = gbpcash * 1.68870;
+  document.getElementById("cad").innerHTML = cadtot;
+  var eurtot = gbpcash * 1.10691;
+  document.getElementById("eur").innerHTML = eurtot;
+  var gbptot = gbpcash * 1;
+  document.getElementById("gbp").innerHTML = gbptot;
+  var audtot = gbpcash * 1.77704;
+  document.getElementById("aud").innerHTML = audtot;
+}
+
+function doAustrailian() {
+  var audcash = document.getElementById("audin").value;
+  var usdtot = audcash * 0.71808;
+  document.getElementById("usd").innerHTML = usdtot;
+  var cadtot = audcash * 0.95010;
+  document.getElementById("cad").innerHTML = cadtot;
+  var eurtot = audcash * 0.62280;
+  document.getElementById("eur").innerHTML = eurtot;
+  var gbptot = audcash * 0.56252;
+  document.getElementById("gbp").innerHTML = gbptot;
+  var audtot = audcash * 1;
+  document.getElementById("aud").innerHTML = audtot;
+}
+
+document.getElementById("cadbut").addEventListener("click",doCanadian);
+document.getElementById("usdbut").addEventListener("click",doAmerican);
+document.getElementById("eurbut").addEventListener("click",doEuropean);
+document.getElementById("gbpbut").addEventListener("click",doBritish);
+document.getElementById("audbut").addEventListener("click",doAustrailian);
+</script>
+
+
+
+
+
+
+
+
+</html>

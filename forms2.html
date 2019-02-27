@@ -1,0 +1,147 @@
+<head>
+<style>
+	body {
+	background-color: lightgreen;
+	}
+
+	input {
+		background-color: #009933;
+		border: 1px solid #003300;
+	}
+	input:hover {
+		background-color: #ffcc00;
+	}
+	
+	input.button {
+		width : 300px;
+	}
+</style>
+</head>
+<body>
+Enter A Canadian Dollar Value: <input type="text" id="cad" value="1">
+<br>
+Value in <span id="conv">Canadian</span>: <span id="mon">1</span>
+<br>
+<input type="button" name="usd" class="button" value="Convert to US Dollars">
+<br>
+<input type="button" name="eur" class="button" value="Convert to Euros">
+<br>
+<input type="button" name="afn" class="button" value="Convert to Afghanistan Afghani">
+<br>
+<input type="button" name="czk" class="button" value="Convert to Czech Koruna">
+<br>
+<input type="button" name="rwf" class="button" value="Convert to Rwandan Franc">
+<br>
+<input type="button" name="zwl" class="button" value="Convert to Zimbabwe Dollar">
+<br>
+<input type="button" name="lbp" class="button" value="Convert to Lebanese Pound">
+<br>
+<input type="button" name="xau" class="button" value="Convert to Gold">
+<br>
+<input type="button" name="btc" class="button" value="Convert to Bitcoin">
+<br>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+$("input[name=usd]").on("click",USD)
+$("input[name=eur]").on("click",EUR)
+$("input[name=afn]").on("click",AFN)
+$("input[name=czk]").on("click",CZK)
+$("input[name=rwf]").on("click",RWF)
+$("input[name=zwl]").on("click",ZWL)
+$("input[name=lbp]").on("click",LBP)
+$("input[name=xau]").on("click",XAU)
+$("input[name=btc]").on("click",BTC)
+
+
+function USD(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("US Dollars");
+$("#mon").html(cad * 0.76);
+}
+
+function EUR(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("Euros");
+$("#mon").html(cad * 0.67114);
+}
+
+function AFN(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("Afghanistan Afghanis");
+$("#mon").html(cad * 56.5873);
+}
+
+function CZK(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("Czech Koruna");
+$("#mon").html(cad * 17.1887);
+}
+
+function RWF(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("Rwandan Franc");
+$("#mon").html(cad * 661.654);
+}
+
+function ZWL(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("Zimbabwe Dollar");
+$("#mon").html(cad * 275.397);
+}
+
+function LBP(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("Lebanese Pound");
+$("#mon").html(cad * 1147.17);
+}
+
+function XAU(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("Gold(oz)");
+$("#mon").html(cad * 0.00057);
+}
+
+function BTC(evt){
+var cad = $("#cad").val();
+cad = parseInt(cad);
+$("#conv").html("Bitcoin");
+$("#mon").html(cad * 0.00019);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

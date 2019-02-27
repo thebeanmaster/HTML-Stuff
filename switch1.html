@@ -1,0 +1,52 @@
+<body>
+
+</body>
+<script>
+document.addEventListener("keydown",readKey);
+
+function readKey() {
+
+var dateObj = new Date();
+var input = dateObj.getDay();
+
+console.log(event);
+
+var keyInfo = event.keyCode;
+
+switch (keyInfo) {
+	case 48 : {
+		document.body.innerHTML = "Sunday";
+	} break;
+	case 49 : {
+		document.body.innerHTML = "Monday";
+	} break;
+	case 50 : {
+		document.body.innerHTML = "Tuesday";
+	} break;
+	case 51 : {
+		document.body.innerHTML = "Wednesday";
+	} break;
+	case 52 : {
+		document.body.innerHTML = "Thursday";
+	} break;
+	case 53 : {
+		document.body.innerHTML = "Friday";
+	} break;
+	case 54 : {
+		document.body.innerHTML = "Saturday";
+	} break; 	
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,142 @@
+<body>
+Item: <span id="item"></span>
+<br>
+In Stock: <span id="stock"></span>
+<br>
+Cost: <span id="cost"></span>
+<br>
+
+</body>
+<script>
+
+
+
+
+
+
+
+var beans = {};
+beans.item = "1 bean";
+beans.stock = "500000";
+beans.cost = "20 dollars";
+
+var tony = {};
+tony.item = "Tony Guo";
+tony.stock = "1";
+tony.cost = "1 peso";
+
+var heart = {};
+heart.item = "Human(?) Heart";
+heart.stock = "17";
+heart.cost = "Blood Offering";
+
+var bag = {};
+bag.item = "Magic Bag";
+bag.stock = "3";
+bag.cost = "10 Dragon Fangs";
+
+var house = {};
+house.item = "The White House";
+house.stock = "1";
+house.cost = "500 Robux";
+
+var ipod = {};
+ipod.item = "iPod 2";
+ipod.stock = "100000000";
+ipod.cost = "1 iPhone X";
+
+var iron = {};
+iron.item = "Iron Man Suit";
+iron.stock = "0";
+iron.cost = "Free";
+
+var ice = {};
+ice.item = "Bag of Melted Ice";
+ice.stock = "200";
+ice.cost = "$10";
+
+var lab = {};
+lab.item = "Mr. Yang's Computer Lab";
+lab.stock = "1";
+lab.cost = "50 cents";
+
+var sock = {};
+sock.item = "1 Left Sock";
+sock.stock = "156";
+sock.cost = "$4";
+
+var box = {};
+box.item = "Box That Doesn't Open";
+box.stock = "43";
+box.cost = "$99.99";
+
+var input = prompt("Enter the code you desire");
+
+switch (input) {
+	case "001" : {
+	document.getElementById("item").innerHTML = beans.item;
+	document.getElementById("stock").innerHTML = beans.stock;
+	document.getElementById("cost").innerHTML = beans.cost;
+	} break;
+	case "002" : {
+	document.getElementById("item").innerHTML = tony.item;
+	document.getElementById("stock").innerHTML = tony.stock;
+	document.getElementById("cost").innerHTML = tony.cost;
+	} break;
+	case "003" : {
+	document.getElementById("item").innerHTML = heart.item;
+	document.getElementById("stock").innerHTML = heart.stock;
+	document.getElementById("cost").innerHTML = heart.cost;
+	} break;
+	case "004" : {
+	document.getElementById("item").innerHTML = bag.item;
+	document.getElementById("stock").innerHTML = bag.stock;
+	document.getElementById("cost").innerHTML = bag.cost;
+	} break;
+	case "005" : {
+	document.getElementById("item").innerHTML = house.item;
+	document.getElementById("stock").innerHTML = house.stock;
+	document.getElementById("cost").innerHTML = house.cost;
+	} break;
+	case "006" : {
+	document.getElementById("item").innerHTML = ipod.item;
+	document.getElementById("stock").innerHTML = ipod.stock;
+	document.getElementById("cost").innerHTML = ipod.cost;
+	} break;
+	case "007" : {
+	document.getElementById("item").innerHTML = iron.item;
+	document.getElementById("stock").innerHTML = iron.stock;
+	document.getElementById("cost").innerHTML = iron.cost;
+	} break;
+	case "008" : {
+	document.getElementById("item").innerHTML = ice.item;
+	document.getElementById("stock").innerHTML = ice.stock;
+	document.getElementById("cost").innerHTML = ice.cost;
+	} break;
+	case "009" : {
+	document.getElementById("item").innerHTML = lab.item;
+	document.getElementById("stock").innerHTML = lab.stock;
+	document.getElementById("cost").innerHTML = lab.cost;
+	} break;
+	case "010" : {
+	document.getElementById("item").innerHTML = sock.item;
+	document.getElementById("stock").innerHTML = sock.stock;
+	document.getElementById("cost").innerHTML = sock.cost;
+	} break;
+	case "011" : {
+	document.getElementById("item").innerHTML = box.item;
+	document.getElementById("stock").innerHTML = box.stock;
+	document.getElementById("cost").innerHTML = box.cost;
+	} break;
+
+
+}
+
+
+
+
+
+
+
+
+</script>

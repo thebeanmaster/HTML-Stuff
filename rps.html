@@ -1,0 +1,124 @@
+<html>
+<head>
+<style>
+.fire{
+	background-color : #ff3300;
+}
+.water{
+	background-color : #0099ff;
+}
+.grass{
+	background-color : #33cc33;
+}
+</style>
+</head>
+<body>
+<center>
+<button class="fire" id="fire">
+Fire
+</button>
+<button class="water" id="water">
+Water
+</button>
+<button class="grass" id="grass">
+Grass
+</button>
+<br><br>
+<div id="user">
+</div>
+<div id="ran">
+</div>
+<br>
+<div id="result">
+</div>
+</center>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9lHRyQpu4n65gPOaPpiAqpM2iJclUYT-xkBU7DPlR-XY3Mlzq" align="left" width="300" height="400" id="userpic">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9lHRyQpu4n65gPOaPpiAqpM2iJclUYT-xkBU7DPlR-XY3Mlzq" align="right" width="300" height="400" id="ranpic">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<button id="restart">
+Restart?
+</button>
+</body>
+<script>
+var ranNum = Math.floor(Math.random() * 3) +1;
+//1 is fire
+//2 is water
+//3 is grass
+function doFire(){
+document.getElementById("user").innerHTML = "Fire";
+document.getElementById("userpic").src ="https://upload.wikimedia.org/wikipedia/commons/4/41/Fire.JPG"
+
+	if (ranNum == 1){
+	document.getElementById("ran").innerHTML = "Fire";
+	document.getElementById("result").innerHTML = "It's a tie!";
+	document.getElementById("ranpic").src ="https://upload.wikimedia.org/wikipedia/commons/4/41/Fire.JPG"
+	}
+	if (ranNum == 2){
+	document.getElementById("ran").innerHTML = "Water";
+	document.getElementById("result").innerHTML = "You suck!";
+	document.getElementById("ranpic").src ="https://timedotcom.files.wordpress.com/2017/08/gettyimages-600651121.jpg"
+	}
+	if (ranNum == 3){
+	document.getElementById("ran").innerHTML = "Grass";
+	document.getElementById("result").innerHTML = "You win!";
+	document.getElementById("ranpic").src ="https://upload.wikimedia.org/wikipedia/commons/6/68/Grass_dsc08672-nevit.jpg"
+	}
+}
+
+function doWater(){
+document.getElementById("user").innerHTML = "Water";
+document.getElementById("userpic").src ="https://timedotcom.files.wordpress.com/2017/08/gettyimages-600651121.jpg"
+if (ranNum == 1){
+	document.getElementById("ran").innerHTML = "Fire";
+	document.getElementById("result").innerHTML = "You win!";
+	document.getElementById("ranpic").src ="https://upload.wikimedia.org/wikipedia/commons/4/41/Fire.JPG"
+	}
+	if (ranNum == 2){
+	document.getElementById("ran").innerHTML = "Water";
+	document.getElementById("result").innerHTML = "It's a tie!";
+	document.getElementById("ranpic").src ="https://timedotcom.files.wordpress.com/2017/08/gettyimages-600651121.jpg"
+	}
+	if (ranNum == 3){
+	document.getElementById("ran").innerHTML = "Grass";
+	document.getElementById("result").innerHTML = "You suck!";
+	document.getElementById("ranpic").src ="https://upload.wikimedia.org/wikipedia/commons/6/68/Grass_dsc08672-nevit.jpg"
+	}
+}
+
+function doGrass(){
+document.getElementById("user").innerHTML = "Grass";
+document.getElementById("userpic").src ="https://upload.wikimedia.org/wikipedia/commons/6/68/Grass_dsc08672-nevit.jpg"
+	if (ranNum == 1){
+	document.getElementById("ran").innerHTML = "Fire";
+	document.getElementById("result").innerHTML = "You suck!";
+	document.getElementById("ranpic").src ="https://upload.wikimedia.org/wikipedia/commons/4/41/Fire.JPG"
+	}
+	if (ranNum == 2){
+	document.getElementById("ran").innerHTML = "Water";
+	document.getElementById("result").innerHTML = "You win!";
+	document.getElementById("ranpic").src ="https://timedotcom.files.wordpress.com/2017/08/gettyimages-600651121.jpg"
+	}
+	if (ranNum == 3){
+	document.getElementById("ran").innerHTML = "Grass";
+	document.getElementById("result").innerHTML = "It's a tie!";
+	document.getElementById("ranpic").src ="https://upload.wikimedia.org/wikipedia/commons/6/68/Grass_dsc08672-nevit.jpg"
+	}
+}
+
+
+function doRestart(){
+location.reload();
+}
+
+
+
+
+
+ 
+
+document.getElementById("fire").addEventListener("click",doFire);
+document.getElementById("water").addEventListener("click",doWater);
+document.getElementById("grass").addEventListener("click",doGrass);
+document.getElementById("restart").addEventListener("click",doRestart);
+</script>
